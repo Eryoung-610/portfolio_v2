@@ -29,7 +29,7 @@ const Home = () => {
           description,
           images: [
             {
-              url: `${seo.canonical}bighead.svg`,
+              url: `${seo.canonical}portfolioPic.png`,
               width: "350px",
               height: "350px",
               alt: "avatar bigheads",
