@@ -47,3 +47,13 @@ blockquote p:first-of-type:before {
 blockquote p:last-of-type:after {
   content: close-quote;
 }
+
+#hand {
+  display: inline-block;
+  transition: transform .2s;
+}
+
+#hand:hover{
+
+  transform: rotate(30deg);
+}

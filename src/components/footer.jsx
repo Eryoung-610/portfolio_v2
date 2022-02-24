@@ -1,5 +1,5 @@
 import { Box, Button, Icon, Link as ChakraLink, Text } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaInstagram, FaCode } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { MAX_WIDTH } from "config";
 
@@ -7,7 +7,7 @@ import { MAX_WIDTH } from "config";
 const socialAccounts = [
   { icon: FaGithub, path: "https://github.com/", title: "Github" },
   { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
-  { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
+  // { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
 ];
 
 const Footer = () => {

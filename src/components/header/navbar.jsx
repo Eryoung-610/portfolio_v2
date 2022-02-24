@@ -67,9 +67,14 @@ const Navbar = () => {
           px={{ lg: "8" }}
           py={{ base: "3", lg: "0" }}
         >
-          <NextLink href="/blog">
-            <a onClick={closeMenu}>Resume</a>
-          </NextLink>
+          <a
+            onClick={closeMenu}
+            target="_blank"
+            href="/EricYoung_Resume.pdf"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
         </chakra.li>
       </chakra.ul>
 

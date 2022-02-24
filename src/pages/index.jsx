@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
+import ParticleBackground from "@/components/ParticleBackground";
 
 import { seo, data } from "config";
 
@@ -32,7 +33,6 @@ const Home = () => {
               url: `${seo.canonical}portfolioPic.png`,
               width: "350px",
               height: "350px",
-              alt: "avatar bigheads",
             },
           ],
         }}
@@ -48,8 +48,8 @@ const Home = () => {
       >
         <NextImage
           src="/portfolioPic.png"
-          width="350"
-          height="350"
+          width="280"
+          height="280"
           placeholder="blur"
           blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
           priority
@@ -57,7 +57,7 @@ const Home = () => {
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
             Hi, I'm Eric Young{" "}
-            <span role="img" aria-label="hand">
+            <span role="img" aria-label="hand" id="hand">
               👋🏻
             </span>
           </Heading>
