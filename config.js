@@ -11,13 +11,16 @@ export const data = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
     image: "/code-review-bro.png",
-    link : "google.com"
+    link : "https://nba-db-project.herokuapp.com/",
+    source : "https://github.com/Eryoung-610/NBA-Database"
   },
   {
-    title: "Your title",
+    title: "Yelp Mock",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
     image: "/code-review-bro.png",
+    link: "https://vigorous-banach-4e46c0.netlify.app/",
+    source : "https://github.com/Eryoung-610/travel_advisor"
   },
   {
     title: "Your title",

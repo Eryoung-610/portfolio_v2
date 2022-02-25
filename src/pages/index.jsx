@@ -118,7 +118,7 @@ const Home = () => {
             About Me
           </Heading>
 
-        <Divider borderColor={color}></Divider>
+          <Divider borderColor={color}></Divider>
 
           <Text py={5}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
@@ -184,13 +184,37 @@ const Home = () => {
               />
             </Box>
 
-            <Box w={{ lg: "50%" }}>
+            <Box
+              w={{ lg: "50%" }}
+              // d={{ base: "flex", lg: "flex" }}
+              // justifyContent="space-evenly"
+            >
               <Heading as="h1">{item.title}</Heading>
               <Text py="4">{item.description}</Text>
 
-              <a target="_blank" href="google.com">
-                Demo
-              </a>
+              <Box
+                d={{ base: "flex", lg: "flex" }}
+                justifyContent="flex-start"
+              >
+                <Text
+                  as="a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={item.link}
+                >
+                  Demo
+                </Text>
+                {/* <Divider orientation="vertical" my={2}/> */}
+                <Text
+                  as="a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={item.source}
+                  ml="2em"
+                >
+                  Source
+                </Text>
+              </Box>
             </Box>
           </Box>
         ))}
