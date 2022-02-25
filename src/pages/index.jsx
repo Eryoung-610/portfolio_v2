@@ -1,13 +1,18 @@
 import {
   Box,
   Button,
+  chakra,
   Heading,
   Text,
   useColorModeValue,
+  Divider,
+  StackDivider,
+  Stack,
+  VStack,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
-import ParticleBackground from "@/components/ParticleBackground";
+import NextLink from "next/link";
 
 import { seo, data } from "config";
 
@@ -38,6 +43,7 @@ const Home = () => {
         }}
       />
 
+      {/* Intro Section */}
       <Box
         as="section"
         d="flex"
@@ -76,8 +82,8 @@ const Home = () => {
             <Text as="span" fontWeight="600">
               front-end web developer
             </Text>{" "}
-            based in the US, I specialize in UI/UX design, Responsive web
-            design, And accessibility.
+            based in the San Francisco, I specialize in UI/UX design, Responsive
+            web design, And accessibility.
           </Text>
           <Button
             colorScheme="telegram"
@@ -90,6 +96,40 @@ const Home = () => {
         </Box>
       </Box>
 
+      {/* About Me Section Horizontal Divider */}
+      <Box
+        as="section"
+        flexDir="column"
+        d={{ lg: "flex" }}
+        justifyContent={{ base: "center", lg: "center" }}
+        alignItems="center"
+        textAlign="center"
+      >
+        <Box
+          // d={{ lg: "flex" }}
+          justifyContent={{ base: "center", lg: "center" }}
+          alignItems="center"
+        >
+          <Heading
+            color={color}
+            // borderBottom="3px solid #229ED9"
+            // borderRadius="4px"
+          >
+            About Me
+          </Heading>
+
+        <Divider borderColor={color}></Divider>
+
+          <Text py={5}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            architecto reprehenderit eaque? Dolorem mollitia eius quae esse
+            distinctio delectus excepturi, aliquid dolorum ipsam, nam quis aut
+            cupiditate laborum nesciunt laudantium?
+          </Text>
+        </Box>
+      </Box>
+
+      {/* About Me Section Vertical Divider */}
       <Box
         as="section"
         d="flex"
@@ -98,6 +138,27 @@ const Home = () => {
         textAlign={{ base: "center", lg: "left" }}
         py="4"
       >
+        <Box
+          d={{ lg: "flex" }}
+          justifyContent={{ base: "center", lg: "left" }}
+          w={{ lg: "90%" }}
+          borderLeft="5px solid #229ED9"
+          borderRadius="4px 4px 4px 4px"
+        >
+          <Box></Box>
+          <Box>
+            <Heading color={color} pl={4}>
+              About Me
+            </Heading>
+            <Text py={5} pl={4}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+              architecto reprehenderit eaque? Dolorem mollitia eius quae esse
+              distinctio delectus excepturi, aliquid dolorum ipsam, nam quis aut
+              cupiditate laborum nesciunt laudantium?
+            </Text>
+          </Box>
+        </Box>
+
         {data.map((item, index) => (
           <Box
             d={{ lg: "flex" }}
@@ -105,6 +166,7 @@ const Home = () => {
             alignItems={{ lg: "center" }}
             flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
             key={index}
+            pb="8"
           >
             <Box
               w={{ base: "80%", lg: "35%" }}
@@ -125,6 +187,10 @@ const Home = () => {
             <Box w={{ lg: "50%" }}>
               <Heading as="h1">{item.title}</Heading>
               <Text py="4">{item.description}</Text>
+
+              <a target="_blank" href="google.com">
+                Demo
+              </a>
             </Box>
           </Box>
         ))}
