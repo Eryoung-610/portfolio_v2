@@ -5,14 +5,18 @@ import { MAX_WIDTH } from "config";
 
 // Fell free to add your social media accounts!
 const socialAccounts = [
-  { icon: FaGithub, path: "https://github.com/", title: "Github" },
-  { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
+  { icon: FaGithub, path: "https://github.com/Eryoung-610", title: "Github" },
+  {
+    icon: FaLinkedin,
+    path: "https://www.linkedin.com/in/eric-young-se/",
+    title: "Linkedin",
+  },
   // { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
 ];
 
 const Footer = () => {
   return (
-    <Box as="footer">
+    <Box as="footer" my="4rem">
       <Box
         display="flex"
         justifyContent="center"

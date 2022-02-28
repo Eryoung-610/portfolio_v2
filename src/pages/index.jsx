@@ -1,18 +1,19 @@
 import {
   Box,
   Button,
-  chakra,
   Heading,
   Text,
   useColorModeValue,
-  Divider,
-  StackDivider,
-  Stack,
-  VStack,
+  Icon,
+  Link as ChakraLink
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
-import NextLink from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import FadeIn from "react-fade-in/lib/FadeIn";
+import { FaGithub, FaExternalLinkAlt, FaGit } from "react-icons/fa";
 
 import { seo, data } from "config";
 
@@ -23,6 +24,11 @@ const Home = () => {
 
   const title = "Home";
   const description = seo.description;
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <>
@@ -44,60 +50,64 @@ const Home = () => {
       />
 
       {/* Intro Section */}
-      <Box
-        as="section"
-        d="flex"
-        alignItems="center"
-        flexDir="column"
-        textAlign="center"
-        py="4"
-      >
-        <NextImage
-          src="/portfolioPic.png"
-          width="280"
-          height="280"
-          placeholder="blur"
-          blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
-          priority
-        />
-        <Box>
-          <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
-            Hi, I'm Eric Young{" "}
-            <span role="img" aria-label="hand" id="hand">
-              👋🏻
-            </span>
-          </Heading>
-          <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
-            <Text as="span" color={color}>
-              Building
-            </Text>{" "}
-            digital products, Brands, And experience.
-          </Heading>
-          <Text py="4">
-            A{" "}
-            <Text as="span" fontWeight="600">
-              web designer
-            </Text>{" "}
-            and{" "}
-            <Text as="span" fontWeight="600">
-              front-end web developer
-            </Text>{" "}
-            based in the San Francisco, I specialize in UI/UX design, Responsive
-            web design, And accessibility.
-          </Text>
-          <Button
-            colorScheme="telegram"
-            variant="ghost"
-            size="lg"
-            fontSize="20px"
-          >
-            Get in touch
-          </Button>
+      <FadeIn delay="350" transitionDuration="1000">
+        <Box
+          as="section"
+          d="flex"
+          alignItems="center"
+          justifyContent="center"
+          flexDir="column"
+          textAlign="center"
+          // py="4"
+          h="85vh"
+          // border="2px solid red"
+        >
+          <NextImage
+            src="/portfolioPic.png"
+            width="280"
+            height="280"
+            placeholder="blur"
+            blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
+            priority
+          />
+          <Box>
+            <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
+              Hi, I'm Eric Young{" "}
+              <span role="img" aria-label="hand" id="hand">
+                👋🏻
+              </span>
+            </Heading>
+            <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
+              <Text as="span" color={color}>
+                Building
+              </Text>
+              {""}, Designing, and Improving User Experiences
+            </Heading>
+            <Text py="4">
+              A{" "}
+              <Text as="span" fontWeight="600">
+                web designer
+              </Text>{" "}
+              and{" "}
+              <Text as="span" fontWeight="600">
+                software engineer
+              </Text>{" "}
+              based in the San Francisco Bay Area
+            </Text>
+            <Button
+              colorScheme="telegram"
+              variant="ghost"
+              size="lg"
+              fontSize="20px"
+            >
+              <a href="mailto:eryoung610@gmail.com">Get in touch</a>
+            </Button>
+          </Box>
         </Box>
-      </Box>
+      </FadeIn>
 
       {/* About Me Section Horizontal Divider */}
-      <Box
+      {/* <Box
         as="section"
         flexDir="column"
         d={{ lg: "flex" }}
@@ -127,37 +137,68 @@ const Home = () => {
             cupiditate laborum nesciunt laudantium?
           </Text>
         </Box>
-      </Box>
+      </Box> */}
 
       {/* About Me Section Vertical Divider */}
       <Box
         as="section"
         d="flex"
         alignItems="center"
-        flexDir="column"
-        textAlign={{ base: "center", lg: "left" }}
-        py="4"
+        justifyContent="center"
+        my="10em"
+        h="70vh"
+        // border="2px solid red"
       >
         <Box
           d={{ lg: "flex" }}
-          justifyContent={{ base: "center", lg: "left" }}
+          // justifyContent={{ base: "center", lg: "left" }}
+          flexDir="column"
           w={{ lg: "90%" }}
           borderLeft="5px solid #229ED9"
           borderRadius="4px 4px 4px 4px"
+          data-AOS="fade-right"
+          data-AOS-delay="300"
+          // border="2px solid red"
         >
-          <Box></Box>
-          <Box>
-            <Heading color={color} pl={4}>
-              About Me
-            </Heading>
-            <Text py={5} pl={4}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-              architecto reprehenderit eaque? Dolorem mollitia eius quae esse
-              distinctio delectus excepturi, aliquid dolorum ipsam, nam quis aut
-              cupiditate laborum nesciunt laudantium?
-            </Text>
-          </Box>
+          <Heading color={color} pl={4} fontSize={["4xl", "5xl"]}>
+            About Me
+          </Heading>
+          <Text as="p" py={5} pl={4} fontSize={["lg", "xl"]}>
+            I am a 22 year old software engineer with a BS in Computer Science
+            from The University of California, Davis. I also graduated from
+            General Assembly's Software Engineering Immersive bootcamp in August
+            of 2020 where I learned skills of web development and was provided
+            experience with the latest front and back-end programming languages.
+          </Text>
+          <Text as="p" py={5} pl={4} fontSize={["lg", "xl"]}>
+            My passion for software engineering stemmed from the first computer
+            science course I took back in high school. Ever since then, I've had
+            the pleasure of learning different modern frameworks and
+            technologies found in today's world.
+          </Text>
         </Box>
+      </Box>
+
+      {/* Projects Section */}
+      <Box
+        as="section"
+        d="flex"
+        alignItems="center"
+        flexDir="column"
+        textAlign={{ base: "center", lg: "left" }}
+        mt="6em"
+        // border="2px solid red"
+      >
+        <Heading
+          mb="4rem"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          color={color}
+          fontSize={["4xl", "5xl"]}
+          // border="2px solid red"
+        >
+          Projects
+        </Heading>
 
         {data.map((item, index) => (
           <Box
@@ -166,7 +207,9 @@ const Home = () => {
             alignItems={{ lg: "center" }}
             flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
             key={index}
-            pb="8"
+            mb="5rem"
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
             <Box
               w={{ base: "80%", lg: "35%" }}
@@ -176,7 +219,7 @@ const Home = () => {
             >
               <NextImage
                 src={item.image}
-                width="500"
+                width="700"
                 height="500"
                 alt={item.title}
                 placeholder="blur"
@@ -184,36 +227,32 @@ const Home = () => {
               />
             </Box>
 
-            <Box
-              w={{ lg: "50%" }}
-              // d={{ base: "flex", lg: "flex" }}
-              // justifyContent="space-evenly"
-            >
+            <Box w={{ base: "100%", lg: "50%" }}>
               <Heading as="h1">{item.title}</Heading>
               <Text py="4">{item.description}</Text>
 
               <Box
                 d={{ base: "flex", lg: "flex" }}
-                justifyContent="flex-start"
+                // justifyContent="space-evenly"
               >
-                <Text
-                  as="a"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <ChakraLink
                   href={item.link}
+                  aria-label={item.title}
+                  mx="2"
+                  _focus={{ outline: "none" }}
+                  isExternal
                 >
-                  Demo
-                </Text>
-                {/* <Divider orientation="vertical" my={2}/> */}
-                <Text
-                  as="a"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  <Icon as = {FaExternalLinkAlt} w="6" h="6"></Icon>
+                </ChakraLink>
+                <ChakraLink
                   href={item.source}
-                  ml="2em"
+                  aria-label={item.title}
+                  mx="2"
+                  _focus={{ outline: "none" }}
+                  isExternal
                 >
-                  Source
-                </Text>
+                  <Icon as = {FaGithub} w="6" h="6" ml = "2rem"></Icon>
+                </ChakraLink>
               </Box>
             </Box>
           </Box>
