@@ -169,7 +169,7 @@ const Home = () => {
             I am a 22 year old software engineer with a BS in Computer Science
             from The University of California, Davis. I also graduated from
             General Assembly's Software Engineering Immersive bootcamp in August
-            of 2020 where I learned skills of web development and was provided
+            of 2020 where I learned web development skills and was provided
             experience with the latest front and back-end programming languages.
           </Text>
           <Text as="p" py={5} pl={4} fontSize={["lg", "xl"]}>
