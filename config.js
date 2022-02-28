@@ -1,7 +1,7 @@
 export const seo = {
   title: "Eric Young",
   description:
-    "A Next.js boilerplate for building your portfolio as quick as possible",
+    "A Next.js and chakra-UI built portfolio",
   canonical: "https://portfolio-boilerplate-nextjs.vercel.app/",
 };
 

@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FadeIn from "react-fade-in/lib/FadeIn";
-import { FaGithub, FaExternalLinkAlt, FaGit } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, } from "react-icons/fa";
 
 import { seo, data } from "config";
 
@@ -95,12 +95,14 @@ const Home = () => {
               based in the San Francisco Bay Area
             </Text>
             <Button
+              as = "a"
               colorScheme="telegram"
               variant="ghost"
               size="lg"
               fontSize="20px"
+              href="mailto:eryoung610@gmail.com"
             >
-              <a href="mailto:eryoung610@gmail.com">Get in touch</a>
+              <a>Get in touch</a>
             </Button>
           </Box>
         </Box>
@@ -160,7 +162,7 @@ const Home = () => {
           data-AOS-delay="300"
           // border="2px solid red"
         >
-          <Heading color={color} pl={4} fontSize={["4xl", "5xl"]}>
+          <Heading color={color} pl={4} fontSize={["3xl", "4xl"]}>
             About Me
           </Heading>
           <Text as="p" py={5} pl={4} fontSize={["lg", "xl"]}>
@@ -194,7 +196,7 @@ const Home = () => {
           data-aos="fade-up"
           data-aos-delay="500"
           color={color}
-          fontSize={["4xl", "5xl"]}
+          fontSize={["3xl", "4xl"]}
           // border="2px solid red"
         >
           Projects
@@ -216,6 +218,7 @@ const Home = () => {
               mx={{ base: "auto", lg: "0" }}
               pl={{ lg: isOdd(index) == 1 && "10" }}
               pr={{ lg: isOdd(index) == 0 && "10" }}
+              href={item.link}
             >
               <NextImage
                 src={item.image}
@@ -224,11 +227,12 @@ const Home = () => {
                 alt={item.title}
                 placeholder="blur"
                 blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
+                href={item.link}
               />
             </Box>
 
             <Box w={{ base: "100%", lg: "50%" }}>
-              <Heading as="h1">{item.title}</Heading>
+              <Heading as="h3" size ="lg">{item.title}</Heading>
               <Text py="4">{item.description}</Text>
 
               <Box

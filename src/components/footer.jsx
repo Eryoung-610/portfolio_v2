@@ -47,49 +47,39 @@ const Footer = () => {
         <Box py="2">
           <Text>
             Built with{" "}
-            <span role="img" aria-label="red heart">
+            {/* <span role="img" aria-label="red heart">
               ❤️
             </span>
-            ,{" "}
+            ,{" "} */}
             <ChakraLink
               href="https://nextjs.org/"
               fontWeight="600"
               _focus={{ outline: "none" }}
               isExternal
             >
-              Next.js
+              Next.js,{" "}
             </ChakraLink>
-            , and{" "}
+              {/* and{" "} */}
             <ChakraLink
               href="https://chakra-ui.com/"
               fontWeight="600"
               _focus={{ outline: "none" }}
               isExternal
             >
-              Chakra UI
+              Chakra UI,{" "}
             </ChakraLink>
-            {/* , Hosted in{" "}
+             and hosted in{" "}
             <ChakraLink
               href="http://vercel.com/"
               fontWeight="600"
               _focus={{ outline: "none" }}
               isExternal
             >
-              Vercel.
-            </ChakraLink> */}
+              Vercel
+            </ChakraLink>
           </Text>
         </Box>
-        {/* <Box py="2">
-          {/* <ChakraLink
-            href="https://github.com/imadatyatalah/nextjs-chakra-ui-portfolio-template"
-            aria-label="source code"
-            isExternal
-          >
-            <Button aria-label="source code">
-              <Icon as={FaCode} w="6" h="6" />
-            </Button>
-          </ChakraLink> */}
-        {/* </Box> */}
+
       </Box>
     </Box>
   );
