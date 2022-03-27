@@ -61,7 +61,7 @@ const Navbar = () => {
             <a onClick={closeMenu}>Blog</a>
           </NextLink>
         </chakra.li>
-
+{/* 
         <chakra.li
           listStyleType="none"
           px={{ lg: "8" }}
@@ -75,7 +75,7 @@ const Navbar = () => {
           >
             Resume
           </a>
-        </chakra.li>
+        </chakra.li> */}
       </chakra.ul>
 
       <ColorModeToggle />

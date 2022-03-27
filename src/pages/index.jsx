@@ -5,7 +5,7 @@ import {
   Text,
   useColorModeValue,
   Icon,
-  Link as ChakraLink
+  Link as ChakraLink,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FadeIn from "react-fade-in/lib/FadeIn";
-import { FaGithub, FaExternalLinkAlt, } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import { seo, data } from "config";
 
@@ -95,7 +95,7 @@ const Home = () => {
               based in the San Francisco Bay Area
             </Text>
             <Button
-              as = "a"
+              as="a"
               colorScheme="telegram"
               variant="ghost"
               size="lg"
@@ -166,8 +166,7 @@ const Home = () => {
             About Me
           </Heading>
           <Text as="p" py={5} pl={4} fontSize={["lg", "xl"]}>
-            I am a 22 year old software engineer with a BS in Computer Science
-            from The University of California, Davis. I also graduated from
+            I am a 22 year old software engineer from the San Francisco Bay Area. I graduated from
             General Assembly's Software Engineering Immersive bootcamp in August
             of 2020 where I learned web development skills and was provided
             experience with the latest front and back-end programming languages.
@@ -232,7 +231,9 @@ const Home = () => {
             </Box>
 
             <Box w={{ base: "100%", lg: "50%" }}>
-              <Heading as="h3" size ="lg">{item.title}</Heading>
+              <Heading as="h3" size="lg">
+                {item.title}
+              </Heading>
               <Text py="4">{item.description}</Text>
 
               <Box
@@ -246,7 +247,7 @@ const Home = () => {
                   _focus={{ outline: "none" }}
                   isExternal
                 >
-                  <Icon as = {FaExternalLinkAlt} w="6" h="6"></Icon>
+                  <Icon as={FaExternalLinkAlt} w="6" h="6"></Icon>
                 </ChakraLink>
                 <ChakraLink
                   href={item.source}
@@ -255,7 +256,7 @@ const Home = () => {
                   _focus={{ outline: "none" }}
                   isExternal
                 >
-                  <Icon as = {FaGithub} w="6" h="6" ml = "2rem"></Icon>
+                  <Icon as={FaGithub} w="6" h="6" ml="2rem"></Icon>
                 </ChakraLink>
               </Box>
             </Box>
