@@ -39,7 +39,7 @@
     "react-dom": "17.0.2",
     "react-fade-in": "^2.0.1",
     "react-icons": "^4.3.1",
-    "react-tsparticles": "^1.41.4",
+    "react-tsparticles": "^1.42.4",
     "reading-time": "^1.5.0",
     "remark-code-titles": "^0.1.2",
     "remark-slug": "^7.0.1"
