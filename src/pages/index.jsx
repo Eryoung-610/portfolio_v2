@@ -166,7 +166,7 @@ const Home = () => {
             About Me
           </Heading>
           <Text as="p" py={5} pl={4} fontSize={["lg", "xl"]}>
-            I am a 22 year old software engineer from the San Francisco Bay Area. I graduated from
+            I am a 23 year old software engineer from the San Francisco Bay Area with a BS in Computer Science from The University of California, Davis. I graduated from
             General Assembly's Software Engineering Immersive bootcamp in August
             of 2020 where I learned web development skills and was provided
             experience with the latest front and back-end programming languages.
