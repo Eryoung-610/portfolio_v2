@@ -22,7 +22,7 @@
     "@fontsource/poppins": "^4.5.1",
     "@fontsource/yellowtail": "^4.5.2",
     "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^12.0.10",
+    "@next/mdx": "^12.2.3",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "dayjs": "^1.10.7",
